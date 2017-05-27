@@ -2,6 +2,7 @@ package com.order.service.impl;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -16,12 +17,15 @@ import com.order.service.Utils;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+	private Logger log = Logger.getLogger(ProductServiceImpl.class.getName());
+	
 	@Autowired
 	private ProductRepository productRepository;
 
 	@Transactional
 	public void save(Product product) {
 		// TODO Auto-generated method stub
+		log.debug("saving product");
 		this.productRepository.save(product);
 	}
 

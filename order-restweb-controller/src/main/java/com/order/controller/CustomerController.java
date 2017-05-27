@@ -2,6 +2,7 @@ package com.order.controller;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,11 +16,14 @@ import com.order.service.CustomerService;
 @Controller
 public class CustomerController {
 
+	private Logger log = Logger.getLogger(CustomerController.class.getName());
+
 	@Autowired
 	private CustomerService customerService;
 
 	@RequestMapping(value = "customer/save", method = RequestMethod.POST)
 	public @ResponseBody void saveCustomer(@RequestBody Customer customer) {
+		log.debug("saving customer");
 		this.customerService.save(customer);
 	}
 
