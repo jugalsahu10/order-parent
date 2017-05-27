@@ -1,6 +1,0 @@
-com\order\entity\Order.class
-com\order\entity\vo\ProductVo.class
-com\order\entity\vo\OrderVo.class
-com\order\entity\Customer.class
-com\order\entity\Product.class
-com\order\entity\vo\CustomerVo.class
