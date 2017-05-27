@@ -1,0 +1,3 @@
+com\order\repository\OrderRepository.class
+com\order\repository\ProductRepository.class
+com\order\repository\CustomerRepository.class
